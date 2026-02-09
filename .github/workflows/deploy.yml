@@ -1,4 +1,4 @@
-name: Deploy Lambda
+name: Deploy 
 
 on:
   workflow_run:
@@ -19,16 +19,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
 
-      - name: Update Lambda Image
-        run: |
-          aws lambda update-function-code \
-            --function-name datagrokr-event-logger \
-            --image-uri 633415687263.dkr.ecr.ap-south-1.amazonaws.com/datagrokr-intern-devops:latest
+     
 
-      - name: Test Invocation
-        run: |
-          aws lambda invoke \
-            --function-name s3andec2 \
-            response.json
-
-          cat response.json
+      -
