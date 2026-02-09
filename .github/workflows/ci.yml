@@ -24,13 +24,13 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t datagrokr-intern-devops:latest example2
+          docker build -t cicdtest:latest
 
       - name: Tag & Push
         run: |
           docker tag datagrokr-intern-devops:latest \
-              633415687263.dkr.ecr.ap-south-1.amazonaws.com/datagrokr-intern-devops
+              633415687263.dkr.ecr.ap-south-1.amazonaws.com/cicdtest
           docker push \
-              633415687263.dkr.ecr.ap-south-1.amazonaws.com/datagrokr-intern-devops
+              633415687263.dkr.ecr.ap-south-1.amazonaws.com/cicdtest
 
 
