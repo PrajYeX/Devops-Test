@@ -28,7 +28,7 @@ jobs:
 
       - name: Tag & Push
         run: |
-          docker tag datagrokr-intern-devops:latest \
+          docker tag cicdtest:latest \
               633415687263.dkr.ecr.ap-south-1.amazonaws.com/cicdtest
           docker push \
               633415687263.dkr.ecr.ap-south-1.amazonaws.com/cicdtest
