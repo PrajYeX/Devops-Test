@@ -24,7 +24,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t cicdtest:latest
+          docker build -t cicdtest:latest .
 
       - name: Tag & Push
         run: |
